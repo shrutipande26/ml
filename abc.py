@@ -1,0 +1,24 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression as LRq 
+
+x = np.array([[1000], [1500], [2000]])
+y = np.array([5000000, 7500000, 10000000])
+
+m = LR()
+m.fit(x, y)
+
+x_new = np.linspace(1000, 2000, 100).reshape(-1, 1)
+y_pred = m.predict(x_new)
+
+plt.scatter(x, y, color='blue', label='Data')
+plt.plot(x_new, y_pred, color='red', label='Line')
+plt.xlabel('Size (sq ft)')
+plt.ylabel('Price (₹)')
+plt.title('House Price Prediction')
+plt.legend()
+plt.show()
+
+print("Slope:", m.coef_[0]) 
+
+print("Intercept:", m.intercept_)
