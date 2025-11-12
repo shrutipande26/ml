@@ -1,0 +1,8 @@
+from sklearn.datasets import load_iris
+import matplotlib.pyplot as plt
+iris = load_iris()
+species = ['setosa', 'versicolor', 'virginica']
+avg_petal_width = [iris.data[iris.target==i, 3].mean() for i in range(3)]
+plt.pie(avg_petal_width, labels=species, autopct='%1.1f%%',)
+plt.title('Average Petal Width by Iris Species')
+plt.show()

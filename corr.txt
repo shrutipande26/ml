@@ -1,0 +1,15 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+data = {
+    'hours_studied': [2, 3, 4, 5, 6, 7, 8, 9, 10],
+    'marks_obtained': [50, 55, 60, 65, 70, 75, 80, 85, 90]
+}
+df = pd.DataFrame(data)
+correlation = df['hours_studied'].corr(df['marks_obtained'])
+print("Correlation Coefficient:", correlation)
+plt.scatter(df['hours_studied'], df['marks_obtained'], color='blue')
+plt.title('Correlation between Hours Studied and Marks Obtained')
+plt.xlabel('Hours Studied')
+plt.ylabel('Marks Obtained')
+plt.grid(True)
+plt.show()

@@ -1,0 +1,8 @@
+from scipy.stats import norm
+x = 1.0
+mean = 0
+sd = 1
+pdf_value = norm.pdf(x, loc=mean, scale=sd)
+print("dnorm (PDF) at x=1.0:", pdf_value)
+cdf_value = norm.cdf(x, loc=mean, scale=sd)
+print("pnorm (CDF) at x=1.0:", cdf_value)

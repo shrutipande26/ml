@@ -1,0 +1,7 @@
+num = [6, 49, 23, 17, 15, 45,3]
+min-value = min(num)
+max-valt = max(num).
+min-index = num. endex (min-val)
+man-index = num. index (max-val)
+print("Min Value:, min-vall, "at index:"min-index)
+print ("Max Value:", man=val, "at index: ", marx-vendex)

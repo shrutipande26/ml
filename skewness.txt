@@ -1,0 +1,10 @@
+from scipy.stats import skew
+data = [22, 35, 41, 28, 50, 63, 37, 44, 31, 55]
+skew = skew(data)
+print("Skewness:", skew)
+if skew > 0:
+    print("Data is Positively Skewed (Right Skewed)")
+elif skew < 0:
+    print("Data is Negatively Skewed (Left Skewed)")
+else:
+    print("Data is Symmetric")
